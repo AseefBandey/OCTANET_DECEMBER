@@ -1,0 +1,128 @@
+*{
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    counter-reset: my-counter;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+
+.todo-app h1{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    counter-increment: my-counter;
+}
+
+ul li::before{
+    content: counter(my-counter);
+    background: #5345a0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-right: 1.0rem;
+    margin-left: -60px;
+}
+
+.crossed-out{
+    text-decoration: line-through;
+}
+
+.buttons{
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#cross-button{
+    position: absolute;
+    bottom: 15px;
+    right: 80px;
+}
+
+#edit-button{
+    position: absolute;
+    bottom: 15px;
+    right: 45px;
+}
+
+#delete-button{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+#add-button{
+    width: 75px;
+    height: 35px;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    background-color: #d12034;
+    font-weight: bold;
+}
+
+#todo-form{
+    border-radius: 25px;
+    border-style: groove;
+    border-color: rgb(163, 21, 192);
+    display: flex;
+}
+
+label{
+    padding: 20px;
+}
+
+input{
+    border-radius: 25px;
+    font-size: 15px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
